@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log("hello")
+
+    // Interpolated
+    console.log('Hello I am %s','😎')
+
+    // Styled
+    console.log('%c I am styled text','font-size:30px;color:red;')
+
+    // warning!
+    console.warn('Hey there is warning ⚠')
+
+    // Error :|
+    console.error('Hey it is a error 😕')
+
+    // Info
+    console.info('Some info here')
+
+    // Testing
+    console.assert(1 === 1, "Oops")
+    console.assert(1 === 2, "Oops")
+
+    // clearing
+    console.clear()
+
+    // Viewing DOM Elements
+    console.dir(document.querySelector('p')) // dir to show dropdown and all methods
+
+    // Grouping together
+    dogs.map(dog => {
+        console.group(`${dog.name}`)
+        console.log(`${dog.name}`)
+        console.log(`${dog.age}`)
+        console.groupEnd(`${dog.name}`)
+    })
+
+    // counting
+    console.count('Man')
+    console.count('jasbs')
+    console.count('Man')
+    console.count('Man')
+
+    // timing
+    console.time('Fetch data')
+    // do some fetching operation 
+    console.timeEnd('Fetch data')
+
+    // table
+    console.table(dogs)
+
+  </script>
+</body>
+</html>
