@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="player">
+        <video src="video.mp4" class="player-viewer"></video>
+        <div class="control-section">
+           <div class="info">
+               <div class="row">
+                   <button class="player-button">▶️</button>
+                </div>
+               <div class="row">
+                    <button data-skip="-10" class="player-button">« 10s</button>
+                    <button data-skip="25" class="player-button">25s »</button>
+               </div>
+           </div>
+           <div class="progress">
+               <div class="completed" />
+           </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
